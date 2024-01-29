@@ -7,7 +7,7 @@ class Action:
         if action_kind not in {"limit buy", "limit sell", "market buy", "market sell"}:
             raise ValueError(f"Unknown action kind: {action_kind}")
 
-        if action_kind not in {"limit buy", "limit sell"} and price is None:
+        if action_kind in {"limit buy", "limit sell"} and price is None:
             raise ValueError("Price is required for limit orders")
 
         if price is not None and price <= 0:
