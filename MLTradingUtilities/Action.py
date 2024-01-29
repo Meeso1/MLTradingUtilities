@@ -26,7 +26,10 @@ class Action:
                     return
                 assets.buy(self.token, self.amount, self.price)
             case "market buy":
-                assets.buy(self.token, self.amount, random.uniform(low, high))
+                price = random.uniform(low, high)
+                if price * self.amount > assets.money:
+                    return
+                assets.buy(self.token, self.amount, price)
             case "limit sell":
                 if high <= self.price:
                     return
