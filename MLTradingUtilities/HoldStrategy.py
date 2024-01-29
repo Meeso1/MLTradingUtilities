@@ -1,8 +1,8 @@
 from __future__ import annotations
 from itertools import accumulate
-from Action import Action
-from Assets import Assets
-from Prediction import Prediction, TokenPrediction
+from MLTradingUtilities.Action import Action
+from MLTradingUtilities.Assets import Assets
+from MLTradingUtilities.Prediction import Prediction, TokenPrediction
 
 
 class HoldStrategy:

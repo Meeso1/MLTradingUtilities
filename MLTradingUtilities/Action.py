@@ -1,5 +1,5 @@
 import random
-from Assets import Assets
+from MLTradingUtilities.Assets import Assets
 
 
 class Action:
